@@ -19,8 +19,7 @@ int Matrix::get_size() const {
 int Matrix::get_value(std::size_t i, std::size_t j) const {
     try {
         return data[i][j];
-    }
-    catch (const std::out_of_range& e) {
+    }catch (const std::out_of_range& e) {
         std::cerr << "Out of Range error: " << e.what() << '\n';
     }
 }
