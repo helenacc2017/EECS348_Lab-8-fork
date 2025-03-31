@@ -1,7 +1,6 @@
 #include "matrix.hpp"
 #include <iostream>
 
-// Program execution starts here
 int main() {
     std::string filename;
     std::cout << "Enter the input file name: ";
