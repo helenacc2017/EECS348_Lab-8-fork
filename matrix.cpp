@@ -17,11 +17,10 @@ int Matrix::get_size() const {
 
 //Get the value at a specific row and column
 int Matrix::get_value(std::size_t i, std::size_t j) const {
-    try {
-        return data[i][j];
-    }catch (const std::out_of_range& e) {
-        std::cerr << "Out of Range error: " << e.what() << '\n';
-    }
+  if (i >= data.size() || j >= data.size()) {
+    throw std::out_of_range("Index out of bounds");
+  }
+  return data[i][j];
 }
 
 //Set a value at a specific row and column
